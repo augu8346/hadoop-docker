@@ -22,7 +22,7 @@ RUN cp /root/.ssh/id_rsa.pub /root/.ssh/authorized_keys
 
 
 # java
-RUN curl -LO 'http://download.oracle.com/otn-pub/java/jdk/7u71-b14/jdk-7u71-linux-x64.rpm' -H 'Cookie: oraclelicense=accept-securebackup-cookie'
+# RUN curl -LO 'https://mirror.its.sfu.ca/mirror/CentOS-Third-Party/RCG/common/x86_64/jdk-7u71-linux-x64.rpm'
 RUN rpm -i jdk-7u71-linux-x64.rpm
 RUN rm jdk-7u71-linux-x64.rpm
 
@@ -101,7 +101,7 @@ RUN service sshd start && $HADOOP_PREFIX/etc/hadoop/hadoop-env.sh && $HADOOP_PRE
 CMD ["/etc/bootstrap.sh", "-d"]
 
 # Hdfs ports
-EXPOSE 50010 50020 50070 50075 50090 8020 9000
+EXPOSE 50010 50020 50071 50076 50090 8020 9001
 # Mapred ports
 EXPOSE 10020 19888
 #Yarn ports
