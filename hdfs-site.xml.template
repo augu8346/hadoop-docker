@@ -1,0 +1,18 @@
+<configuration>
+    <property>
+        <name>dfs.replication</name>
+        <value>1</value>
+    </property>
+    <property>
+	<name>dfs.datanode.http.address</name>
+	<value>HOSTNAME:50076</value>
+    </property>
+    <property>
+	<name>dfs.namenode.http-address</name>
+        <value>HOSTNAME:50071</value>
+    </property> 
+    <property>
+        <name>dfs.namenode.secondary.http-address</name>
+        <value>HOSTNAME:50092</value>
+    </property>
+</configuration>
